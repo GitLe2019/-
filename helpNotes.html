@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>帮助说明</title>
+    <link rel="stylesheet" href="css/helpNotes.css">
+    <script>
+        var docEl = document.documentElement;
+        var metaEl = document.querySelector('meta[name="viewport"]');
+        var dpr = window.devicePixelRatio || 1;
+        var scale = 1 / dpr;
+        //                
+        // 设置viewport，进行缩放，达到高清效果
+        //metaEl.setAttribute('content', 'width=' + dpr * docEl.clientWidth + ',initial-scale=' + scale + ',maximum-scale=' + scale + ', minimum-scale=' + scale + ',user-scalable=no');
+        function getSize() { // 获取屏幕的宽度
+            var screenWidth = docEl.clientWidth;
+            if (screenWidth > 768) {
+                screenWidth = 768
+            }
+            docEl.style.fontSize = screenWidth / (750 / 40) + 'px';
+        }
+        getSize(); // 页面加载完执行一次
+        window.onresize = function () {
+            getSize();
+        }
+    </script>
+    <style type="text/css" scoped>
+    @import url('./topbar.css');
+
+    </style>
+</head>
+<body>
+    <div class="top">
+        <img id="topimg" src="./img/btn_back.png" alt="">
+        <span class="toptitle">帮助说明</span>
+    </div>
+    <div class="content">
+        <div class="content-1">
+            <div class="content-1-title">
+                <div class="shu"></div> 成为推客后，如何完成任务，赚到金币？
+            </div>
+            <div class="content-1-content">
+                文案说明文案说明文案说明文案说明文案说明文案说明文案说明文案说明
+                文案说明文案说明文案说明文案说明文案说明文案说明文案说明文案说
+            </div>
+        </div>
+    </div>
+    <div style="height: 4.4rem;"></div>
+    <div class="foot">
+        <button class="foot-1">成为推客</button>
+    </div>
+</body>
+
+</html>

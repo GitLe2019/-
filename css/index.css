@@ -1,0 +1,167 @@
+*{
+    padding: 0;
+    margin: 0;
+    line-height: 1;
+}
+.top{
+    position: relative;
+    width:100%;
+    height:2.2rem;
+    background:rgba(254,254,254,1);
+    box-shadow:0px 1px 0px 0px rgba(230,230,230,1);
+}
+#topimg{
+    position: absolute;
+    height: 1.55rem;
+    width: 1.55rem;
+    top: 0.325rem;
+    left: 0.625rem;
+    /* float: left; */
+}
+.toptext{
+    position: absolute;
+    top: 0.825rem;
+    left: 2.35rem;
+    /* width:25px; */
+    /* height:11.5px; */
+    /* line-height: 11.5px; */
+    font-size:0.6rem;
+    font-family:PingFang SC;
+    font-weight:250;
+    color:rgba(51,51,51,1);
+
+}
+.toptitle{
+    position: absolute;
+    top: 0.7rem;
+    left: 8.55rem;
+    /* widows: 40px; */
+    /* height:16px; */
+    /* line-height: 16px; */
+    font-size:0.85rem;
+    font-family:PingFang SC;
+    font-weight:500;
+    color:rgba(51,51,51,1);
+}
+
+.articl{
+    display: flex;
+    position: relative;
+    widows: 100%;
+    background:rgba(255,255,255,1);
+    padding: 0.75rem;
+}
+
+.articl-img{
+    
+}
+
+#articlimg{
+    width:4.7rem;
+    height:4.7rem;
+    border-radius:0.3rem;
+    vertical-align: -0.25rem;
+}
+.articl-desc{
+    padding-left: 0.5rem;
+    padding-top: 0.25rem;
+}
+.articl-detail .detail{
+    font-size:0.7rem;
+    line-height: 1.2;
+}
+
+.articl-detail .desc{
+    /* display: block; */
+    width: 11.5rem;
+    font-size:0.6rem;
+    line-height: 1;
+    padding-top: 0.2rem;
+    color: #666666;
+    
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
+}
+
+.articl-speed{
+    position: absolute;
+    right: 0.75rem;
+    bottom: 1rem;
+    
+    
+}
+.articl-speed img{
+    width: 0.75rem;
+    height: 0.75rem;
+    vertical-align: bottom;
+}
+.articl-speed span{
+    font-size: 0.55rem;
+    color: #999999;
+    vertical-align:middle
+    /* line-height: 0.75rem; */
+    /* padding-bottom: 0.5rem; */
+}
+
+.speedImg{
+    position: absolute;
+    top: 4.75rem;
+    left: 9.65rem;
+    width: 0.75rem;
+    height: 0.75rem;
+}
+.progressBar{
+    position: absolute;
+    top: 4.85rem;
+    left: 10.6rem;
+    /* width:85px; */
+    height:0.525rem;
+    font-size:0.55rem;
+    font-family:PingFang SC;
+    font-weight:200;
+    color:rgba(153,153,153,1);
+    line-height:0.525rem;
+}
+.goldCoin{
+    position: absolute;
+    top: 4.75rem;
+    left: 14.85rem;
+    width: 0.75rem;
+    height: 0.75rem;
+}
+.bonus{
+    position: absolute;
+    top: 4.85rem;
+    left: 15.8rem;
+    /* width:85px; */
+    height:0.525rem;
+    font-size:0.55rem;
+    font-family:PingFang SC;
+    font-weight:200;
+    color:rgba(153,153,153,1);
+    line-height:0.525rem;
+}
+
+.g-foot {
+z-index: 1000;
+position: fixed;
+left: 0;
+bottom: 0;
+width: 100%;
+height: 2.5rem;
+line-height: 2.5rem;
+text-align: center;
+}
+
+.bottom{
+    width: 100%;
+    height:5.325rem;
+    background-color: rgba(221,221,221,0.5);
+    font-size:0.6rem;
+    font-family:PingFang SC;
+    font-weight:500;
+    color:rgba(153,153,153,1);
+    line-height: 1rem;
+    text-align: center;
+}

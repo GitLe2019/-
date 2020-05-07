@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var docEl = document.documentElement;
+        var metaEl = document.querySelector('meta[name="viewport"]');
+        var dpr = window.devicePixelRatio || 1;
+        var scale = 1 / dpr;
+        //                
+        // 设置viewport，进行缩放，达到高清效果
+        //metaEl.setAttribute('content', 'width=' + dpr * docEl.clientWidth + ',initial-scale=' + scale + ',maximum-scale=' + scale + ', minimum-scale=' + scale + ',user-scalable=no');
+        function getSize() { // 获取屏幕的宽度
+            var screenWidth = docEl.clientWidth;
+            if (screenWidth > 768) {
+                screenWidth = 768
+            }
+            docEl.style.fontSize = screenWidth / (750 / 40) + 'px';
+        }
+        getSize(); // 页面加载完执行一次
+        window.onresize = function () {
+            getSize();
+        }
+    </script>
+
+    <style type="text/css" scoped>
+    @import url('./css/center.css');
+    @import url('./navbar.css');
+        
+    </style>
+</head>
+<body>
+    <div id="app">
+        <div class="top">
+            <span class="toptitle">我的</span>
+        </div>
+        <div class="perInfo">
+            <div class="headPortrait">
+
+            </div>
+            <div  class='perDesc'>
+                <p>用户昵称用户昵称用户昵称</p>
+                <div class="inFo">
+                    <div class="vip">会员</div>
+                    <div class="pusher">推客</div>
+                    <div class="examine">审核中</div>
+                </div>
+                
+            </div>
+            
+            <div class="becomeTweeter">成为推客</div>
+        </div>
+        <div class="informationList">
+            <div class="myTreasure">
+                <img class="yuanBao" src="./img/icon_yuanbao.png" alt="">
+                <p class="myYuanBao">我的元宝</p>
+                <img class="inTo" src="./img/back-right.png" alt="">
+            </div>
+            <div class="myTreasure">
+                <img class="yuanBao" src="./img/形状 19.png" alt="">
+                <p class="myYuanBao">推广海报</p>
+                <!-- <span class="inTo">></span> -->
+                <img class="inTo" src="./img/back-right.png" alt="">
+            </div>
+            <div class="myTreasure">
+                <img class="yuanBao" src="./img/iocn_myteam.png" alt="">
+                <p class="myYuanBao">我的团队</p>
+                <img class="inTo" src="./img/back-right.png" alt="">
+            </div>
+            <div class="myTreasure">
+                <img class="yuanBao" src="./img/icon_tuiguangwenzhang.png" alt="">
+                <p class="myYuanBao">推广文章</p>
+                <img class="inTo" src="./img/back-right.png" alt="">
+            </div>
+        </div>
+
+        <div class="bottomNavBar">
+            <div class="box">
+                 <img src="./navbarImg/tap_home_unselect.png" alt="">
+                 <p>首页</p>
+            </div>
+            <div class="box1">
+                 <img src="./navbarImg/tap_wenzhen_unselect.png" alt="">
+                 <p>推广</p>
+            </div>
+             
+           <div class="box2">
+                 <img src="./navbarImg/tap_my_unselect.png" alt="">
+                 <p>我的</p>
+           </div>
+             
+        </div>
+    </div>
+</body>
+</html>

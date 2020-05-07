@@ -1,0 +1,125 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+#topimg{
+    position: absolute;
+    height: 0.8rem;
+    width: 0.5rem;
+    top: 0.675rem;
+    left: 0.775rem;
+    /* float: left; */
+}
+
+.myMoney{
+    /* position: relative; */
+    display: flex;
+    widows: 100%;
+    /* height: 6.25rem; */
+    padding: 0.8rem 7.5rem 0.5rem 7.5rem ;
+    text-align: center;
+}
+
+.myMoney img{
+    width: 2.25rem;
+    height: 2.25rem;
+}
+
+.myMoney p{
+    font-size:0.6rem;
+    color:rgba(51,51,51,1);
+}
+
+.myMoney span{
+    font-size:0.9rem;
+    color:rgba(51,51,51,1);
+}
+
+.treasureDesc{
+    display: flex;
+    widows: 100%;
+    padding: 0.675rem 13rem 0.65rem 0.75rem;
+    box-shadow:0px 1px 0px 0px rgba(230,230,230,1);
+
+}
+
+.treasureDesc div{
+    width:0.15rem;
+    height:0.65rem;
+    background:rgba(69,122,236,1);
+    padding-top: 0.2rem;   
+}
+
+.treasureDesc p{
+    font-size:0.75rem;
+    color:rgba(51,51,51,1);
+    margin-left: 0.325rem;
+    
+}
+
+
+
+.taskList{
+    position: relative;
+    display: flex;
+    widows: 100%;
+    padding: 0.65rem 0.75rem 0.65rem 0.75rem;
+    box-shadow:0px 1px 0px 0px rgba(230,230,230,1);
+    line-height: 0.8rem;
+}
+
+.ltaskList{
+
+}
+
+.ltaskList p{
+    font-size:0.7rem;
+    color:rgba(51,51,51,1);
+}
+
+.ltaskList span{
+    font-size:0.5rem;
+    color:rgba(153,153,153,1)
+}
+
+.rtaskList{
+    position: absolute;
+    top: 0.65rem;
+    right: 0.75rem;
+    text-align: right;
+    /* margin-left: 8.4rem; */
+}
+
+.rtaskList p{
+    /* margin-left: 0.9rem; */
+    
+    /* float: right; */
+    font-size:0.9rem;
+    color:#FF3A3A
+    
+}
+
+.rtaskList span{
+    /* float: right; */
+    font-size:0.5rem;
+    color:rgba(153,153,153,1)
+}
+
+
+
+.cashWithdrawal{
+    bottom: 0;
+    left: 0;
+    position: fixed;
+    width:100%;
+    height:2.15rem;
+    background:rgba(69,122,236,1);
+    font-size:0.75rem;
+    font-family:PingFang SC;
+    font-weight:500;
+    color:rgba(255,255,255,1);
+    line-height:2.15rem;
+    text-align: center;
+
+}

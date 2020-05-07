@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var docEl = document.documentElement;
+        var metaEl = document.querySelector('meta[name="viewport"]');
+        var dpr = window.devicePixelRatio || 1;
+        var scale = 1 / dpr;
+        //                
+        // 设置viewport，进行缩放，达到高清效果
+        //metaEl.setAttribute('content', 'width=' + dpr * docEl.clientWidth + ',initial-scale=' + scale + ',maximum-scale=' + scale + ', minimum-scale=' + scale + ',user-scalable=no');
+        function getSize() { // 获取屏幕的宽度
+            var screenWidth = docEl.clientWidth;
+            if (screenWidth > 768) {
+                screenWidth = 768
+            }
+            docEl.style.fontSize = screenWidth / (750 / 40) + 'px';
+        }
+        getSize(); // 页面加载完执行一次
+        window.onresize = function () {
+            getSize();
+        }
+    </script>
+
+    <style type="text/css" scoped>
+        @import url('./topbar.css');
+        @import url('./css/myTeam.css');
+    </style>
+
+</head>
+<body>
+    <div id="app">
+        <div class="top">
+            <img id="topimg" src="./img/btn_back.png" alt="">
+            <span class="toptitle">我的团队</span>
+        </div>
+        <div class="teamInfo">
+            <div class="teamPortrait"></div>
+            <span class="teamName">用户昵称用户昵称</span>
+            <span class="teamNumber">团队人数:56人</span>
+        </div>
+        <div class="memberCategory">
+            <span class="directMember" onclick="member(1)">直接成员</span>
+            <span class="indirectMember" onclick="member(2)">间接成员</span>
+            <div class="lunderline"></div>
+            <div class="runderline"></div>
+        </div>
+        <div class="memberList">
+            <div class="memberInfo">
+                <div class="touXiang">
+                </div>
+                <span class="memberName">布鲁克·百灵</span>
+            </div>
+            <div class="memberInfo">
+                <div class="touXiang">
+                </div>
+                <span class="memberName">卢卡斯·布拉泽克</span>
+            </div>
+            <div class="memberInfo">
+                <div class="touXiang">
+                </div>
+                <span class="memberName">布鲁纳·布兰科</span>
+            </div>
+            <div class="memberInfo">
+                <div class="touXiang">
+                </div>
+                <span class="memberName">卡鲁姆·刘易斯</span>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function member(index){
+            var direct = document.getElementsByClassName('directMember')[0]
+            direct.style.color = 'rgba(102,102,102,1)';
+            var indirect = document.getElementsByClassName('indirectMember')[0]
+            indirect.style.color = 'rgba(102,102,102,1)';
+
+            var lunder = document.getElementsByClassName('lunderline')[0]
+            lunder.style.background = 'rgba(255,255,255,1)';
+            var runder = document.getElementsByClassName('runderline')[0]
+            runder.style.background = 'rgba(255,255,255,1)';
+
+            if (index==1){
+                direct.style.color = 'rgba(69,122,236,1)';
+                lunder.style.background = 'rgba(69,122,236,1)';
+            }
+            else if (index==2) {
+                indirect.style.color = 'rgba(69,122,236,1)';
+                runder.style.background = 'rgba(69,122,236,1)';
+            }
+        }
+    </script>
+
+</body>
+</html>

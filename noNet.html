@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>网络问题</title>
+    <link rel="stylesheet" href="css/noNet.css">
+    <script>
+        var docEl = document.documentElement;
+        var metaEl = document.querySelector('meta[name="viewport"]');
+        var dpr = window.devicePixelRatio || 1;
+        var scale = 1 / dpr;
+        //                
+        // 设置viewport，进行缩放，达到高清效果
+        //metaEl.setAttribute('content', 'width=' + dpr * docEl.clientWidth + ',initial-scale=' + scale + ',maximum-scale=' + scale + ', minimum-scale=' + scale + ',user-scalable=no');
+        function getSize() { // 获取屏幕的宽度
+            var screenWidth = docEl.clientWidth;
+            if (screenWidth > 768) {
+                screenWidth = 768
+            }
+            docEl.style.fontSize = screenWidth / (750 / 40) + 'px';
+        }
+        getSize(); // 页面加载完执行一次
+        window.onresize = function () {
+            getSize();
+        }
+    </script>
+        <style type="text/css" scoped>
+            @import url('./topbar.css');
+        
+            </style>
+</head>
+<body>
+    <div class="top">
+        <img id="topimg" src="./img/btn_back.png" alt="">
+        <span class="toptitle">网络问题</span>
+    </div>
+    <div class="content">
+        <img src="img/pic_zanwuwangluo.png" alt="">
+        <p>网络有点问题哦!</p>
+        <span>努力找不到网络...请检查后重试 </span>
+    </div>
+    <div class="btn">
+        <button onclick="location.reload();" class="btn-1">
+            刷新
+        </button>
+    </div>
+    
+</body>
+</html>

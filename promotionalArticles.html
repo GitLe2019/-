@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var docEl = document.documentElement;
+        var metaEl = document.querySelector('meta[name="viewport"]');
+        var dpr = window.devicePixelRatio || 1;
+        var scale = 1 / dpr;
+        //                
+        // 设置viewport，进行缩放，达到高清效果
+        //metaEl.setAttribute('content', 'width=' + dpr * docEl.clientWidth + ',initial-scale=' + scale + ',maximum-scale=' + scale + ', minimum-scale=' + scale + ',user-scalable=no');
+        function getSize() { // 获取屏幕的宽度
+            var screenWidth = docEl.clientWidth;
+            if (screenWidth > 768) {
+                screenWidth = 768
+            }
+            docEl.style.fontSize = screenWidth / (750 / 40) + 'px';
+        }
+        getSize(); // 页面加载完执行一次
+        window.onresize = function () {
+            getSize();
+        }
+    </script>
+    <style type="text/css" scoped>
+    @import url('./topbar.css');
+    @import url('./css/promotionalArticles.css');
+    @import url('./navbar.css');
+
+        
+    </style>
+</head>
+<body>
+    <div id="app">
+        <div class="top">
+            <img id="topimg" src="./img/btn_back.png" alt="">
+            <!-- <span class="toptext">望楼</span> -->
+            <span class="toptitle">推广文章</span>
+        </div>
+        <div class="articlList">
+                <div class="articl">
+                    <div class="articl-img">
+                        <img id="articlimg" src="./img/Desert.jpg" alt="">
+                    </div>
+
+                    <div class="articl-desc">
+                        <p class='detail'>最前线-力天影业再次递交港股上市申 请，盈利仍然依赖“买断电视剧”</p>
+                        <p class="desc">内容简介内容简介内容简介内容简介内容内容简介内容简介内容简介内容简介内容......</p>
+                    </div>
+                    <div class="articl-speed">
+                        <img src="./img/icon_time.png" alt="">
+                        <span>过期时间:2019.08.09 16:04</span>
+                    </div>
+                    
+                    <!-- <p class='articldetail'>最前线-力天影业再次递交港股上市申 请，盈利仍然依赖“买断电视剧”</p>
+                    <p class="articlresc">内容简介内容简介内容简介内容简介内容...</p> -->
+                    
+                    <!-- <img class="goldCoin" src="./img/形状 18.png" alt="">
+                    <span class='bonus'>奖金:4+6</span> -->
+                </div>
+                <div class="read">
+                    <span class="totalReading">总阅读(210)</span>
+                    <span class="yReading">有效阅读(110)</span>
+                    <span class="wReading">无效阅读(100)</span>
+                </div>          
+        </div> 
+
+        <div class="articlList">
+            <div class="articl">
+                <div class="articl-img">
+                    <img id="articlimg" src="./img/Desert.jpg" alt="">
+                </div>
+
+                <div class="articl-desc">
+                    <p class='detail'>最前线-力天影业再次递交港股上市申 请，盈利仍然依赖“买断电视剧”</p>
+                    <p class="desc">内容简介内容简介内容简介内容简介内容内容简介内容简介内容简介内容简介内容......</p>
+                </div>
+                <div class="articl-speed">
+                    <img src="./img/icon_time.png" alt="">
+                    <span>过期时间:2019.08.09 16:04</span>
+                </div>
+                
+                <!-- <p class='articldetail'>最前线-力天影业再次递交港股上市申 请，盈利仍然依赖“买断电视剧”</p>
+                <p class="articlresc">内容简介内容简介内容简介内容简介内容...</p> -->
+                
+                <!-- <img class="goldCoin" src="./img/形状 18.png" alt="">
+                <span class='bonus'>奖金:4+6</span> -->
+            </div>
+            <div class="read">
+                <span class="totalReading">总阅读(210)</span>
+                <span class="yReading">有效阅读(110)</span>
+                <span class="wReading">无效阅读(100)</span>
+            </div>          
+        </div>
+
+        <div class="articlList">
+            <div class="articl">
+                <div class="articl-img">
+                    <img id="articlimg" src="./img/Desert.jpg" alt="">
+                </div>
+
+                <div class="articl-desc">
+                    <p class='detail'>最前线-力天影业再次递交港股上市申 请，盈利仍然依赖“买断电视剧”</p>
+                    <p class="desc">内容简介内容简介内容简介内容简介内容内容简介内容简介内容简介内容简介内容......</p>
+                </div>
+                <div class="articl-speed">
+                    <img src="./img/icon_time.png" alt="">
+                    <span>过期时间:2019.08.09 16:04</span>
+                </div>
+                
+                <!-- <p class='articldetail'>最前线-力天影业再次递交港股上市申 请，盈利仍然依赖“买断电视剧”</p>
+                <p class="articlresc">内容简介内容简介内容简介内容简介内容...</p> -->
+                
+                <!-- <img class="goldCoin" src="./img/形状 18.png" alt="">
+                <span class='bonus'>奖金:4+6</span> -->
+            </div>
+            <div class="read">
+                <span class="totalReading">总阅读(210)</span>
+                <span class="yReading">有效阅读(110)</span>
+                <span class="wReading">无效阅读(100)</span>
+            </div>          
+        </div>
+
+        <div class="articlList">
+            <div class="articl">
+                <div class="articl-img">
+                    <img id="articlimg" src="./img/Desert.jpg" alt="">
+                </div>
+
+                <div class="articl-desc">
+                    <p class='detail'>最前线-力天影业再次递交港股上市申 请，盈利仍然依赖“买断电视剧”</p>
+                    <p class="desc">内容简介内容简介内容简介内容简介内容内容简介内容简介内容简介内容简介内容......</p>
+                </div>
+                <div class="articl-speed">
+                    <img src="./img/icon_time.png" alt="">
+                    <span>过期时间:2019.08.09 16:04</span>
+                </div>
+                
+                <!-- <p class='articldetail'>最前线-力天影业再次递交港股上市申 请，盈利仍然依赖“买断电视剧”</p>
+                <p class="articlresc">内容简介内容简介内容简介内容简介内容...</p> -->
+                
+                <!-- <img class="goldCoin" src="./img/形状 18.png" alt="">
+                <span class='bonus'>奖金:4+6</span> -->
+            </div>
+            <div class="read">
+                <span class="totalReading">总阅读(210)</span>
+                <span class="yReading">有效阅读(110)</span>
+                <span class="wReading">无效阅读(100)</span>
+            </div>          
+        </div>
+
+        <div class="bottom">我也是有底线的哦~</div>
+    </div>
+</body>
+</html>

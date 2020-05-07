@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var docEl = document.documentElement;
+        var metaEl = document.querySelector('meta[name="viewport"]');
+        var dpr = window.devicePixelRatio || 1;
+        var scale = 1 / dpr;
+        //                
+        // 设置viewport，进行缩放，达到高清效果
+        //metaEl.setAttribute('content', 'width=' + dpr * docEl.clientWidth + ',initial-scale=' + scale + ',maximum-scale=' + scale + ', minimum-scale=' + scale + ',user-scalable=no');
+        function getSize() { // 获取屏幕的宽度
+            var screenWidth = docEl.clientWidth;
+            if (screenWidth > 768) {
+                screenWidth = 768
+            }
+            docEl.style.fontSize = screenWidth / (750 / 40) + 'px';
+        }
+        getSize(); // 页面加载完执行一次
+        window.onresize = function () {
+            getSize();
+        }
+    </script>
+
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+<script src="http://html2canvas.hertzen.com/dist/html2canvas.min.js" type="text/javascript" charset="utf-8" async defer></script>
+<script src="./js/canvas2image.js" type="text/javascript" charset="utf-8" async defer></script>
+<!-- <script src="./js/savepic.js"></script> -->
+    
+    <style type="text/css" scoped>
+    @import url('./topbar.css');
+    @import url('./navbar.css');
+    @import url('./css/extension.css');
+    </style>
+</head>
+<body>
+    <div id="app">
+        <div class="top">
+            <span class="toptitle">推广</span>
+        </div>
+        <div class="invitePromotion">
+            <div class="pic">
+                <div class="touXxiang"></div>
+                <div class="content">
+                    <div class="tkName">莫妮卡·格拉布科</div>
+                    <div class="yqInto">邀请你加入望楼推客</div>
+                </div>      
+                <div class="poster"></div>
+                <div>
+                    <div class="code"></div>
+                    <div class="fingerprint"></div>
+                    <div class="erweima">
+                        <div class="longPress">长按识别二维码</div>
+                        <div class="obtain">获取注册资格</div>
+                    </div>
+                </div>
+                
+                
+            </div>
+        </div>
+        <div class="preservation">保存图片</div>
+        <div class="bottomNavBar">
+            <div class="box">
+                 <img src="./navbarImg/tap_home_unselect.png" alt="">
+                 <p>首页</p>
+            </div>
+            <div class="box1">
+                 <img src="./navbarImg/tap_wenzhen_unselect.png" alt="">
+                 <p>推广</p>
+            </div>
+             
+           <div class="box2">
+                 <img src="./navbarImg/tap_my_unselect.png" alt="">
+                 <p>我的</p>
+           </div>
+             
+        </div>
+    </div>
+
+
+    <!-- 提示用户长按保存 -->
+    <div onclick="remove()" class='tanChuang'>
+
+    </div>
+
+</body>
+
+    <script>
+        // 关闭弹窗
+        function remove(){
+        document.getElementsByClassName('tanChuang')[0].style.display = 'none'
+     }
+    </script>
+
+</html>

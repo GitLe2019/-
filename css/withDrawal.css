@@ -1,0 +1,116 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: rgba(221,221,221,0.5);
+}
+
+.tiXian{
+    position: relative;
+    margin: 1rem  0.75rem 0 0.75rem;
+    width: 17.25rem;
+    height: 6rem;
+    background-color: white;
+}
+
+.tiXianNumber{
+    position: absolute;
+    top: 0.725rem;
+    left: 0.775rem;
+    font-size:0.65rem;
+    font-family:PingFang SC;
+    font-weight:500;
+    color:rgba(51,51,51,1)
+}
+
+.inputBox{
+    position: absolute;
+    top: 2.05rem;
+    left: 1.5rem;
+    height: 1.25rem;
+    border: none;
+    outline:medium;
+    font-size:0.9rem;
+    font-family:PingFang SC;
+    font-weight:bold;
+    color:rgba(51,51,51,1);
+}
+
+.rmb{
+    position: absolute;
+    top: 2.05rem;
+    left: 0.75rem;
+    font-size:0.9rem;
+    font-family:PingFang SC;
+    font-weight:bold;
+    color:rgba(51,51,51,1);
+}
+
+.line{
+    position: absolute;
+    top: 3.325rem;
+    left: 0.8rem;
+    width: 15.75rem;
+    height: 0.05rem;
+    background:rgba(230,230,230,1);
+}
+
+.tips{
+    position: absolute;
+    top: 3.975rem;
+    left: 0.8rem;
+    font-size:0.5rem;
+    font-family:PingFang SC;
+    font-weight:500;
+    color:rgba(153,153,153,1);
+}
+
+.wxAccount{
+    position: relative;
+    margin: 0  0.75rem 0 0.75rem;
+    width: 17.25rem;
+    height: 5.5rem;
+    background-color: white;
+}
+
+.accountText{
+    position: absolute;
+    top: 0.75rem;
+    left: 0.8rem;
+    font-size:0.55rem;
+    font-family:PingFang SC;
+    font-weight:500;
+    color:rgba(51,51,51,1);
+}
+
+.headPortrait{
+    position: absolute;
+    top: 0.7rem;
+    left: 15.65rem;
+    width: 0.9rem;
+    height:0.9rem;
+    /* background:rgba(255,255,255,1); */
+    background-image: url('../img/radio_unse.png');
+    background-size: 100%;
+    border:0.05rem solid rgba(255,255,255,1);
+    box-shadow:0px 5px 6px 0px rgba(255,255,255,0.2);
+    border-radius:50%;
+}
+
+.tiXianBtn{
+    position: absolute;
+    top: 2.575rem;
+    left: 0.75rem;
+    width:15.75rem;
+    height:2.15rem;
+    background:rgba(221,221,221,1);
+    border-radius:0.25rem;
+    font-size:0.75rem;
+    font-family:PingFang SC;
+    font-weight:500;
+    color:rgba(255,255,255,1);
+    line-height:2.15rem;
+    text-align: center;
+}

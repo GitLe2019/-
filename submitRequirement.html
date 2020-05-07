@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>提交需求</title>
+    <link rel="stylesheet" type="text/css" href="stylesheets/reset.css">
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+    <link rel="stylesheet" href="css/submitRequirement.css">
+    <script src="scripts/picker.min.js"></script>
+    <script>
+        var docEl = document.documentElement;
+        var metaEl = document.querySelector('meta[name="viewport"]');
+        var dpr = window.devicePixelRatio || 1;
+        var scale = 1 / dpr;
+        //                
+        // 设置viewport，进行缩放，达到高清效果
+        //metaEl.setAttribute('content', 'width=' + dpr * docEl.clientWidth + ',initial-scale=' + scale + ',maximum-scale=' + scale + ', minimum-scale=' + scale + ',user-scalable=no');
+        function getSize() { // 获取屏幕的宽度
+            var screenWidth = docEl.clientWidth;
+            if (screenWidth > 768) {
+                screenWidth = 768
+            }
+            docEl.style.fontSize = screenWidth / (750 / 40) + 'px';
+        }
+        getSize(); // 页面加载完执行一次
+        window.onresize = function () {
+            getSize();
+        }
+    </script>
+    <script src="./js/jquery-1.10.2.js"></script>
+    
+     <style type="text/css" scoped>
+        @import url('./topbar.css');
+        @import url('./popup.css');
+
+        </style>
+</head>
+<body>
+
+<div class="top">
+    <img id="topimg" src="./img/btn_back.png" alt="">
+    <span class="toptitle">提交需求</span>
+</div>
+  
+    <div class="content">
+        <div class="content-0">
+            <img src="img/icon_leixing.png" alt=""> 
+            <span id="type">请选择任务类型</span> 
+            <img id="img1" style="position: absolute;right: 0.725rem;" src="img/back-right.png"  alt="">
+        </div>
+        <div style="height: 1.25rem;background-color: #F8F8F8;"></div>
+        <div class="content-1">
+            <img src="img/icon_xingming.png" alt=""> 
+            <input id="name" type="text" placeholder="请输入联系人姓名">    
+        </div>
+        <div class="content-1">
+            <img src="img/icon_shoujihaoma.png" alt=""> 
+            <input id="phone" type="text"  placeholder="请输入联系人手机号码">
+        </div>
+    </div>
+    <div class="explain">在您提交联系方式后，工作人员会尽快与您取得联系。</div>
+
+    <div style="height: 4.4rem;"></div>
+    <div class="foot">
+        <button class="foot-1">提交</button>
+    </div>
+
+
+    <!-- 弹出框 -->
+    <div onclick="remove()" class="tanChuang">
+    
+    </div>
+
+
+    <script>
+        var entityState;
+        var data1 = [
+          {
+            text: '新店开业',
+            value: 1
+          }, {
+            text: '店庆活动',
+            value: 2
+          },
+          {
+            text: '其他',
+            value: 3
+          }
+        ];
+        var typel = document.getElementById('type');
+        var imgl = document.getElementById('img1');
+        var picker1 = new Picker({
+          data: [data1]
+        });
+      
+        picker1.on('picker.select', function (selectedVal, selectedIndex) {
+            typel.innerText = data1[selectedIndex[0]].text;
+          entityState=data1[selectedIndex[0]].value;
+        });
+      
+        imgl.addEventListener('click', function () {
+          picker1.show();
+        });
+
+
+        // 关闭弹窗
+        function remove(){
+        document.getElementsByClassName('tanChuang')[0].style.display = 'none'
+     }
+        
+      
+      </script>
+      <script src="./js/submit.js"></script>
+
+</body>
+</html>

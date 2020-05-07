@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var docEl = document.documentElement;
+        var metaEl = document.querySelector('meta[name="viewport"]');
+        var dpr = window.devicePixelRatio || 1;
+        var scale = 1 / dpr;
+        //                
+        // 设置viewport，进行缩放，达到高清效果
+        //metaEl.setAttribute('content', 'width=' + dpr * docEl.clientWidth + ',initial-scale=' + scale + ',maximum-scale=' + scale + ', minimum-scale=' + scale + ',user-scalable=no');
+        function getSize() { // 获取屏幕的宽度
+            var screenWidth = docEl.clientWidth;
+            if (screenWidth > 768) {
+                screenWidth = 768
+            }
+            docEl.style.fontSize = screenWidth / (750 / 40) + 'px';
+        }
+        getSize(); // 页面加载完执行一次
+        window.onresize = function () {
+            getSize();
+        }
+    </script>
+
+    <script src="./js/jquery-1.10.2.js"></script>
+    <script src="./js/cash.js"></script>
+
+    <style type="text/css" scoped>
+        @import url('./topbar.css');
+        @import url('./css/withDrawal.css');
+    </style>
+
+</head>
+<body>
+    <div id="app">
+        <div class="top">
+            <img id="topimg" src="./img/btn_back.png" alt="">
+            <span class="toptitle">提现</span>
+        </div>
+        <div class="tiXian">
+            <span class="tiXianNumber">提现金额</span>
+            <div class="rmb">¥</div>
+            <input class="inputBox" type="text">
+            <div class="line"></div>
+            <span class="tips">100元宝兑换1人民币，每天最多兑换5000元宝。</span>
+        </div>
+        <div class="wxAccount">
+            <span class="accountText">微信账户</span>
+            <div onclick="iswx()" class="headPortrait"></div>
+            <div class="tiXianBtn">提现</div>
+
+        </div>
+    </div>
+
+</body>
+</html>

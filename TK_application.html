@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>推客申请</title>
+    <link rel="stylesheet" href="css/TK_application.css">
+    <script>
+        var docEl = document.documentElement;
+        var metaEl = document.querySelector('meta[name="viewport"]');
+        var dpr = window.devicePixelRatio || 1;
+        var scale = 1 / dpr;
+        //                
+        // 设置viewport，进行缩放，达到高清效果
+        //metaEl.setAttribute('content', 'width=' + dpr * docEl.clientWidth + ',initial-scale=' + scale + ',maximum-scale=' + scale + ', minimum-scale=' + scale + ',user-scalable=no');
+        function getSize() { // 获取屏幕的宽度
+            var screenWidth = docEl.clientWidth;
+            if (screenWidth > 768) {
+                screenWidth = 768
+            }
+            docEl.style.fontSize = screenWidth / (750 / 40) + 'px';
+        }
+        getSize(); // 页面加载完执行一次
+        window.onresize = function () {
+            getSize();
+        }
+    </script>
+    <script src="./js/jquery-1.10.2.js"></script>
+     <style type="text/css" scoped>
+        @import url('./topbar.css');
+        /* @import url('./popup.css'); */
+        </style>
+</head>
+<body>
+<div class="top">
+    <img id="topimg" src="./img/btn_back.png" alt="">
+    <span class="toptitle">推客申请</span>
+</div>
+    <div class="content">
+        <div class="content-1">
+            <img src="img/icon_xingming.png" alt=""> 
+            <input id="acname" type="text" placeholder="用户昵称">    
+        </div>
+        <div class="content-1">
+            <img src="img/icon_shoujihaoma.png" alt=""> 
+            <input id="acphone" type="text"  placeholder="请输入联系人手机号">
+        </div>
+    </div>
+    <div class="explain">提交申请后，工作人员会在1-2个工作日通过您的申请，成为 推客后，请抓尽快交接任务。</div>
+    <div style="height: 4.4rem;"></div>
+    <div class="foot">
+        <button class="foot-1">提交</button>
+    </div>
+
+    <!-- 弹出框 -->
+    <div onclick="remove()" class="tanChuang">
+    
+    </div>
+
+</body>
+<script>
+    $('input').on('input propertychange',function(){
+        if ($('#acname').val()){
+            if ($('#acphone').val()){
+                document.getElementsByClassName('foot-1')[0].style.backgroundColor = '#457AEC' 
+                $('.foot-1').on('click',function(){
+                  var phone = $('#acphone').val()
+                  var tanchuang = document.getElementsByClassName('tanChuang')[0]
+                  if(!(/^1[3456789]\d{9}$/.test(phone))){                     
+                    $('.tanChuang').html('手机号码有误，请重填') 
+                    tanchuang.style.display = 'block'
+                    setTimeout(function(){
+                        // $('.tanChuang').click()
+                      remove()
+                    },1500)          
+                  } else{
+                        console.log(111111)
+                        $('.tanChuang').html('提交成功') 
+                        tanchuang.style.display = 'block'
+                        setTimeout(function(){
+                            // $('.tanChuang').click()
+                        remove()
+                        },1500) 
+                    }
+              })
+            }
+        }
+    })
+
+        // 关闭弹窗
+        function remove(){
+        document.getElementsByClassName('tanChuang')[0].style.display = 'none'
+     }
+
+</script>
+</html>

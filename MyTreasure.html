@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var docEl = document.documentElement;
+        var metaEl = document.querySelector('meta[name="viewport"]');
+        var dpr = window.devicePixelRatio || 1;
+        var scale = 1 / dpr;
+        //                
+        // 设置viewport，进行缩放，达到高清效果
+        //metaEl.setAttribute('content', 'width=' + dpr * docEl.clientWidth + ',initial-scale=' + scale + ',maximum-scale=' + scale + ', minimum-scale=' + scale + ',user-scalable=no');
+        function getSize() { // 获取屏幕的宽度
+            var screenWidth = docEl.clientWidth;
+            if (screenWidth > 768) {
+                screenWidth = 768
+            }
+            docEl.style.fontSize = screenWidth / (750 / 40) + 'px';
+        }
+        getSize(); // 页面加载完执行一次
+        window.onresize = function () {
+            getSize();
+        }
+    </script>
+
+    <style type="text/css" scoped>
+        @import url('./css/center.css');
+        @import url('./topbar.css');
+        @import url('./css/myTreasure.css');
+        
+    </style>
+</head>
+<body>
+    <div id="app">
+        <div class="top">
+            <img id="topimg" src="./img/btn_back.png" alt="">
+            <span class="toptitle">我的元宝</span>
+        </div>
+        <div class="myMoney">
+            <div>
+                <img src="./img/icon_yuanbao_wode.png" alt="">
+                <p>我的元宝</p>
+                <span >113.92<p></span>
+            </div> 
+        </div>
+
+        <div class="treasureDesc">
+            <div></div>
+            <p>元宝收支明细</p>
+        </div>
+        
+        <div class="informationList">
+            <div class="taskList">
+                <div class="ltaskList">
+                    <p>推广任务01完成</p>
+                    <span>2020-09-08 17:23</span>
+                </div>
+                <div class="rtaskList">
+                    <p>+1.92</p>
+                    <span>余额：103.5</span>
+                </div>       
+            </div>
+            <div class="taskList">
+                <div class="ltaskList">
+                    <p>推广任务02完成</p>
+                    <span>2020-09-08 17:23</span>
+                </div>
+                <div class="rtaskList">
+                    <p>+1.92</p>
+                    <span>余额：103.5</span>
+                </div>       
+            </div>
+            <div class="taskList">
+                <div class="ltaskList">
+                    <p>推广任务03完成</p>
+                    <span>2020-09-08 17:23</span>
+                </div>
+                <div class="rtaskList">
+                    <p style="color: #32C80A;">－1.92</p>
+                    <span>余额：103.5</span>
+                </div>       
+            </div>
+            <div class="taskList">
+                <div class="ltaskList">
+                    <p>推广任务04完成</p>
+                    <span>2020-09-08 17:23</span>
+                </div>
+                <div class="rtaskList">
+                    <p>+1.92</p>
+                    <span>余额：103.5</span>
+                </div>       
+            </div>
+        </div>
+        <div style="height: 2.15rem"></div>
+        <div class="cashWithdrawal">
+            我要提现
+        </div>
+    </div>
+</body>
+</html

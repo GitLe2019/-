@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var docEl = document.documentElement;
+        var metaEl = document.querySelector('meta[name="viewport"]');
+        var dpr = window.devicePixelRatio || 1;
+        var scale = 1 / dpr;
+        //                
+        // 设置viewport，进行缩放，达到高清效果
+        //metaEl.setAttribute('content', 'width=' + dpr * docEl.clientWidth + ',initial-scale=' + scale + ',maximum-scale=' + scale + ', minimum-scale=' + scale + ',user-scalable=no');
+        function getSize() { // 获取屏幕的宽度
+            var screenWidth = docEl.clientWidth;
+            if (screenWidth > 768) {
+                screenWidth = 768
+            }
+            docEl.style.fontSize = screenWidth / (750 / 40) + 'px';
+        }
+        getSize(); // 页面加载完执行一次
+        window.onresize = function () {
+            getSize();
+        }
+    </script>
+
+    <style type="text/css" scoped>
+    @import url('./topbar.css');
+    @import url('./css/articlDetail.css');
+    </style>
+</head>
+<body>
+    <div id="app">
+        <div class="top">
+            <img id="topimg" src="./img/btn_back.png" alt="">
+            <!-- <span class="toptext">望楼</span> -->
+            <span class="toptitle">推广文章</span>
+        </div>
+        <div class="articl">
+            <div class="articl-img">
+                <img id="articlimg" src="./img/Desert.jpg" alt="">
+            </div>
+            <div class="articl-desc">
+                <div class="articl-detail">
+                    <p class="detail">最前线-力天影业再次递交港股上市申请，盈利仍然依赖“买断电视剧”</p>
+                    <p class="desc">内容简介内容简介内容简介内容简介内容内容简介内容简介内容简介内容简介内容</p>
+                </div> 
+            </div>
+            <div class="articl-speed">
+                <img  src="./img/icon_time.png" alt="">
+                <span >过期时间:2019.08.09 16:04</span>
+                <!-- <img  src="./img/形状 18.png" alt="">
+                <span >奖金:4+6</span>     -->
+            </div>             
+        </div>
+        <div class="read">
+            <span class="totalReading" onclick="btn1(1)">总阅读(210)</span>
+            <span class="yReading" onclick="btn1(2)">有效阅读(110)</span>
+            <span class="wReading" onclick="btn1(3)">无效阅读(100)</span>
+            <div class="lunderline"></div>
+            <div class="cunderline"></div>
+            <div class="runderline"></div>
+        </div>
+        <div class="memberList">
+            <div class="memberInfo">
+                <div class="touXiang">
+                </div>
+                <div class="rhyd">
+                    <div class="memberName">布鲁克·百灵</div>
+                    <div class="reason">原因:XXXXXXXXXXXX</div>
+                </div>
+                
+                <div class="validity">
+                    <div class="isEffective">有效</div>
+                    <div class="creatTime">2019.08.09 16:04</div>
+                </div>      
+            </div>
+
+            <div class="memberInfo">
+                <div class="touXiang">
+                </div>
+                <div class="rhyd">
+                    <div class="memberName">布鲁克·百灵</div>
+                    <div class="reason">原因:XXXXXXXXXXXX</div>
+                </div>
+                
+                <div class="validity">
+                    <div class="isEffective">有效</div>
+                    <div class="creatTime">2019.08.09 16:04</div>
+                </div>      
+            </div>
+
+            <div class="memberInfo">
+                <div class="touXiang">
+                </div>
+                <div class="rhyd">
+                    <div class="memberName">布鲁克·百灵</div>
+                    <div class="reason">原因:XXXXXXXXXXXX</div>
+                </div>
+                
+                <div class="validity">
+                    <div class="isEffective">有效</div>
+                    <div class="creatTime">2019.08.09 16:04</div>
+                </div>      
+            </div>
+
+            <div class="memberInfo">
+                <div class="touXiang">
+                </div>
+                <div class="rhyd">
+                    <div class="memberName">布鲁克·百灵</div>
+                    <div class="reason">原因:XXXXXXXXXXXX</div>
+                </div>
+                
+                <div class="validity">
+                    <div class="isEffective">有效</div>
+                    <div class="creatTime">2019.08.09 16:04</div>
+                </div>      
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function btn1(index){
+            // console.log(111111)
+
+            var total = document.getElementsByClassName('totalReading')[0]
+            total.style.color = 'rgba(51,51,51,1)';
+            var youx = document.getElementsByClassName('yReading')[0]
+            youx.style.color = 'rgba(51,51,51,1)';
+            var wux = document.getElementsByClassName('wReading')[0]
+            wux.style.color = 'rgba(51,51,51,1)';
+            
+            var left = document.getElementsByClassName('lunderline')[0]
+            left.style.background = 'rgba(255,255,255,1)';
+            var center = document.getElementsByClassName('cunderline')[0]
+            center.style.background = 'rgba(255,255,255,1)';
+            var right = document.getElementsByClassName('runderline')[0]
+            right.style.background = 'rgba(255,255,255,1)';
+            if (index==1){
+                total.style.color = 'rgba(69,122,236,1)';
+                left.style.background = 'rgba(69,122,236,1)';
+            }
+            else if (index==2){
+                youx.style.color = 'rgba(69,122,236,1)';
+                center.style.background = 'rgba(69,122,236,1)';
+            }
+            else if (index==3){
+                wux.style.color = 'rgba(69,122,236,1)';
+                right.style.background = 'rgba(69,122,236,1)';
+            }
+
+            
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,166 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.top{
+    position: relative;
+    width:100%;
+    height:2.2rem;
+    /* background:rgba(254,254,254,1); */
+    background-color: #457AEC;
+    /* box-shadow:0px 1px 0px 0px rgba(230,230,230,1); */
+
+}
+
+.toptitle{
+    position: absolute;
+    top: 0.7rem;
+    left: 8.55rem;
+    /* widows: 40px; */
+    /* height:16px; */
+    /* line-height: 16px; */
+    font-size:0.85rem;
+    font-family:PingFang SC;
+    font-weight:500;
+    color:rgba(51,51,51,1);
+}
+
+.perInfo{
+    background-image: url('../img/top_bg.png');
+    position: relative;
+    display: flex;
+    widows: 100%;
+    /* height: 4.2rem; */
+    /* border: 0.05rem dashed saddlebrown; */
+    /* margin-bottom: 0.3rem; */
+    padding: 0.7rem 0.75rem 0.7rem 0.75rem;
+}
+
+.headPortrait{
+    /* position: absolute;
+    top: 0.7rem;
+    left: 0.75rem; */
+    width: 2.8rem;
+    height:2.8rem;
+    background:rgba(255,255,255,1);
+    /* border:0.05rem solid rgba(255,255,255,1); */
+    /* box-shadow:0px 5px 6px 0px rgba(255,255,255,0.2); */
+    border-radius:50%;
+}
+
+.perDesc{
+    position: absolute;
+    top: 1.3rem;
+    left: 4rem;
+}
+
+.perDesc p{
+    font-size:0.7rem;
+    font-family:PingFang SC;
+    font-weight:400;
+    color:rgba(255,255,255,1);
+}
+
+.inFo{
+    display: flex;
+}
+
+.vip{
+    padding: 0.15rem 0.4rem 0.15rem 0.4rem;
+    /* position: absolute;
+    top: 2.35rem;
+    left: 4.075rem; */
+    /* width:70px; */
+    /* height:0.75rem; */
+    background:rgba(24,24,24,1);
+    border-radius:0.2rem;
+    color:rgba(255,255,255,1);
+    font-size:0.5rem;
+    font-family:PingFang SC;
+}
+
+.pusher{
+    padding: 0.15rem 0.4rem 0.15rem 0.4rem;
+    margin-left: 0.35rem;
+    /* position: absolute;
+    top: 2.35rem;
+    left: 6.175rem; */
+    /* width:70px;*/
+    /* height:0.75rem;  */
+    background:#CAAD61;
+    border-radius:0.2rem;
+    color:rgba(255,255,255,1);
+    font-size:0.5rem;
+    font-family:PingFang SC;
+}
+.examine{
+    padding: 0.15rem 0.4rem 0.15rem 0.4rem;
+    margin-left: 0.35rem;
+    /* position: absolute;
+    top: 2.35rem;
+    left: 8.275rem; */
+    /* width:70px;*/
+    /* height:0.75rem;  */
+    /* background:#CAAD61; */
+    border-radius:0.2rem;
+    border:0.03rem solid rgba(255,255,255,1);
+    color:rgba(255,255,255,1);
+    font-size:0.5rem;
+    font-family:PingFang SC;
+    
+}
+
+.becomeTweeter{
+    position: absolute;
+    top: 1.5rem;
+    left: 14.725rem;
+    width:3.25rem;
+    height:1.225rem;
+    background:rgba(255,255,255,1);
+    box-shadow:0px 6px 9px 0px rgba(57,97,185,1);
+    border-radius :0.25rem;
+    font-size:0.6rem;
+    font-family:PingFang SC;
+    color:rgba(69,122,236,1);
+    text-align: center;
+    line-height: 1.225rem;
+}
+
+.informationList{
+    /* margin-top: 0.3rem; */
+    width: 100%;
+}
+
+.myTreasure{
+    position: relative;
+    width: 100%;
+    height: 2.4375rem;
+    box-shadow:0px 1px 0px 0px rgba(230,230,230,1);
+}
+
+.yuanBao{
+    position: absolute;
+    top: 0.7rem;
+    left: 0.825rem;
+    width: 1rem;
+    height: 1rem;
+}
+
+.myYuanBao{
+    position: absolute;
+    top: 0.7rem;
+    left: 2.225rem;
+    font-size:0.75rem;
+    font-family:PingFang SC;
+    color:rgba(51,51,51,1);
+}
+
+.inTo{
+    position: absolute;
+    top: 0.6rem;
+    left: 17rem;
+    width: 1.2rem;
+    height: 1.2rem;
+    color: #AAAAAA;
+}
